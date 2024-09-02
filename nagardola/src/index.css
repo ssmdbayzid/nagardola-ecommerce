@@ -26,10 +26,30 @@
     }    
 
     .heading {
-        @apply text-secondary text-2xl;
+        @apply text-secondary text-2xl font-semibold;
     }
     .text_para {
         @apply text-accent text-[16px] leading-[20px] font-semibold
     }
 }
 
+
+.ant-carousel .slick-slider button {  
+    color: #222;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;   
+    opacity: 1;
+}
+
+ .ant-carousel .slick-next::after {
+    top: 40%;
+    left: 30%;
+    --tw-translate-y: -50%;
+}
+.ant-carousel .slick-prev::after {
+    top: 40%;
+    left: 40%;
+    --tw-translate-y: -50%;
+}

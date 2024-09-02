@@ -25,7 +25,9 @@ const data = [
 
 export default function Facilities() {
   return (
-    <div className='container grid grid-cols-4 my-10'>
+    <div
+    data-aos="fade-up"
+    className='container grid grid-cols-4 my-10 '>
         {
             data.map(d=>
             <div className="flex items-center gap-3">               
