@@ -1,0 +1,7 @@
+Necessery Tools for nagordola website
+1. Special Offer Carousal (On hover image change).
+2.Carousel.
+3. breadcrumb
+
+4. Outfit
+.theme-modal.newsletter-modal .news-latter-box .newslwtter-content p

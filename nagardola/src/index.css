@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    :root {
+        --primary-color: 204 162 112;
+        --secondary-color: 34 34 34;
+        --accent-color: 118 118 118;
+    }    
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;    
+    }
+    body ::selection {    
+            background: rgb(var(--primary-color));
+            color: #fff;
+    }
+}
+
+
+@layer components {
+    .container {
+        @apply max-w-[1140px] w-full mx-auto;
+    }    
+
+    .heading {
+        @apply text-secondary text-2xl;
+    }
+    .text_para {
+        @apply text-accent text-[16px] leading-[20px] font-semibold
+    }
+}
+

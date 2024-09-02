@@ -1,0 +1,116 @@
+Primary Color: rgba(204 162 112 1)
+Secondary Color: #222;
+Heading Color: rgba(34 34 34 1)
+Accent Color: rgba(118 118 118 1)
+
+
+
+// Logo
+https://themes.pixelstrap.net/katie/assets/images/logo/logo.png
+// Herro banner 
+https://themes.pixelstrap.net/katie/assets/images/layout-3/1.jpg
+
+// Section-t-icon
+https://themes.pixelstrap.net/katie/assets/images/svg-icon/1.svg
+https://themes.pixelstrap.net/katie/assets/images/svg-icon/2.svg
+https://themes.pixelstrap.net/katie/assets/images/svg-icon/3.svg
+https://themes.pixelstrap.net/katie/assets/images/svg-icon/4.svg
+
+// collection-banner
+https://themes.pixelstrap.net/katie/assets/images/banner/banner-7.jpg
+https://themes.pixelstrap.net/katie/assets/images/banner/banner-8.jpg
+
+// Special Offer Carousel Image
+--> 01
+https://themes.pixelstrap.net/katie/assets/images/product/product-3/8.jpg
+https://themes.pixelstrap.net/katie/assets/images/product/product-3/12.jpg
+
+--> 02
+https://themes.pixelstrap.net/katie/assets/images/product/product-3/5.jpg
+https://themes.pixelstrap.net/katie/assets/images/product/product-3/6.jpg
+
+
+// Special Product
+--> 01 
+https://themes.pixelstrap.net/katie/assets/images/product/product-3/1.jpg
+https://themes.pixelstrap.net/katie/assets/images/product/product-3/11.jpg
+
+--> 02
+https://themes.pixelstrap.net/katie/assets/images/product/product-3/2.jpg
+https://themes.pixelstrap.net/katie/assets/images/product/product-3/19.jpg
+
+--> 03
+https://themes.pixelstrap.net/katie/assets/images/product/product-3/3.jpg
+https://themes.pixelstrap.net/katie/assets/images/product/product-3/18.jpg
+
+--> 04
+https://themes.pixelstrap.net/katie/assets/images/product/product-3/10.jpg
+https://themes.pixelstrap.net/katie/assets/images/product/product-3/21.jpg
+
+// Featured Product
+--> 01 
+https://themes.pixelstrap.net/katie/assets/images/product/product-3/4.jpg
+https://themes.pixelstrap.net/katie/assets/images/product/product-3/16.jpg
+
+--> 02
+https://themes.pixelstrap.net/katie/assets/images/product/product-3/11.jpg
+https://themes.pixelstrap.net/katie/assets/images/product/product-3/15.jpg
+
+--> 03
+https://themes.pixelstrap.net/katie/assets/images/product/product-3/9.jpg
+https://themes.pixelstrap.net/katie/assets/images/product/product-3/14.jpg
+
+--> 04
+https://themes.pixelstrap.net/katie/assets/images/product/product-3/10.jpg
+https://themes.pixelstrap.net/katie/assets/images/product/product-3/13.jpg
+
+// Best Seller
+--> 01
+https://themes.pixelstrap.net/katie/assets/images/product/product-3/16.jpg
+https://themes.pixelstrap.net/katie/assets/images/product/product-3/2.jpg
+
+--> 02
+https://themes.pixelstrap.net/katie/assets/images/product/product-3/17.jpg
+https://themes.pixelstrap.net/katie/assets/images/product/product-3/1.jpg
+
+--> 03
+https://themes.pixelstrap.net/katie/assets/images/product/product-3/18.jpg
+https://themes.pixelstrap.net/katie/assets/images/product/product-3/20.jpg
+
+--> 04
+https://themes.pixelstrap.net/katie/assets/images/product/product-3/19.jpg
+https://themes.pixelstrap.net/katie/assets/images/product/product-3/3.jpg
+
+// Style Banner
+https://themes.pixelstrap.net/katie/assets/images/banner/banner-4.png
+https://themes.pixelstrap.net/katie/assets/images/banner/banner-5.jpg
+
+// Order XXL 
+https://themes.pixelstrap.net/katie/assets/images/banner/banner-10.jpg
+https://themes.pixelstrap.net/katie/assets/images/banner/6.jpg
+https://themes.pixelstrap.net/katie/assets/images/banner/7.jpg
+https://themes.pixelstrap.net/katie/assets/images/banner/8.jpg
+https://themes.pixelstrap.net/katie/assets/images/banner/9.jpg
+
+// Brand
+https://themes.pixelstrap.net/katie/assets/images/logos/1.png
+https://themes.pixelstrap.net/katie/assets/images/logos/2.png
+https://themes.pixelstrap.net/katie/assets/images/logos/3.png
+https://themes.pixelstrap.net/katie/assets/images/logos/4.png
+https://themes.pixelstrap.net/katie/assets/images/logos/5.png
+https://themes.pixelstrap.net/katie/assets/images/logos/6.png
+https://themes.pixelstrap.net/katie/assets/images/logos/7.png
+
+// Subscribe 
+https://themes.pixelstrap.net/katie/assets/images/banner/banner-6.png
+
+// Instagram
+https://themes.pixelstrap.net/katie/assets/images/instagram/6.jpg
+https://themes.pixelstrap.net/katie/assets/images/instagram/7.jpg
+https://themes.pixelstrap.net/katie/assets/images/instagram/8.jpg
+https://themes.pixelstrap.net/katie/assets/images/instagram/9.jpg
+https://themes.pixelstrap.net/katie/assets/images/instagram/10.jpg
+https://themes.pixelstrap.net/katie/assets/images/instagram/7.jpg
+https://themes.pixelstrap.net/katie/assets/images/instagram/6.jpg
+
+
