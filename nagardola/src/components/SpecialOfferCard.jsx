@@ -69,8 +69,11 @@ export default function SpecialOfferCard() {
             >
                 {
                     spacialProducts.map((product, index) =>
-                        <div keys={index}>
-                            <img src={product.images[0]} className='w-full h-full object-cover' style={contentStyle} />
+                        <div keys={index} className='group '>
+                            <div className="relative">
+                            <img src={product.images[0]} className='w-full h-full object-cover group-hover:opacity-0 transition-all duration-500' style={contentStyle} />
+                            <img src={product.images[1]} className='w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-all duration-700 absolute -translate-x-full group-hover:translate-x-0 top-0 left-0' style={contentStyle} />
+                            </div>
                             <div className="pt-2">
                                 <div className="">
                                     <span className='flex items-center gap-1 '>

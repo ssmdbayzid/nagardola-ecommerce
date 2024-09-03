@@ -12,6 +12,7 @@ import AOS from 'aos'; // Import AOS
 AOS.init({
   duration: 1200, // Duration of animations
   // You can add other options here
+  once: true,
 });
 
 createRoot(document.getElementById('root')).render(

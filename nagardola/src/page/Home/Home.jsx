@@ -3,6 +3,8 @@ import HeroSection from './HeroSection'
 import  './Home.css'
 import Facilities from './Facilities'
 import SpecialOffer from './SpecialOffer'
+import StyleBanner from './StyleBanner'
+import SpecialProduct from './SpecialProduct'
 
 
 export default function Home() {
@@ -11,6 +13,8 @@ export default function Home() {
     <HeroSection />
     <Facilities />
     <SpecialOffer />
+    <SpecialProduct />
+    <StyleBanner />
     </>
   )
 }

@@ -16,11 +16,14 @@
     body ::selection {    
             background: rgb(var(--primary-color));
             color: #fff;
-    }
+    }    
 }
 
 
 @layer components {
+    .section {
+        padding-top: calc(30px + 3.125vw);
+    }
     .container {
         @apply max-w-[1140px] w-full mx-auto;
     }    
@@ -28,10 +31,23 @@
     .heading {
         @apply text-secondary text-2xl font-semibold;
     }
+    .title {
+        @apply text-secondary text-3xl  leading-[48px] font-bold
+    }
     .text_para {
         @apply text-accent text-[16px] leading-[20px] font-semibold
     }
+    .sub_title {
+        @apply text-accent text-[20px] leading-[28px] font-semibold
+    }
 }
+
+:where(.css-dev-only-do-not-override-vn1oyg).ant-btn-default:not(:disabled):not(.ant-btn-disabled):hover {
+    color: rgb(var(--primary-color));
+    border-color: rgb(var(--primary-color));    
+}
+
+
 
 
 .ant-carousel .slick-slider button {  
