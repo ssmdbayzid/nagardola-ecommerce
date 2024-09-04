@@ -96,9 +96,6 @@ export default function SpecialOfferCard() {
                             </div>
                         </div>
                     )}
-
-
-
             </Carousel>
         </div>
     )

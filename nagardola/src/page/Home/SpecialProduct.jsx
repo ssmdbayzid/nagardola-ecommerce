@@ -1,4 +1,4 @@
-import { Button, FloatButton } from 'antd'
+import { Button, FloatButton, Modal } from 'antd'
 import React, { useState } from 'react'
 import { IoIosStar } from 'react-icons/io'
 import SpecialProductCard from '../../components/SpecialProductCard'
@@ -54,7 +54,8 @@ const spacialProducts = [
 ]
 
 export default function SpecialProduct() {
-        const [selectedButton, setSelectedButton] = useState("new_product")
+        const [selectedButton, setSelectedButton] = useState("new_product");
+      
 
     return (
         <div className='section container'>
@@ -85,7 +86,9 @@ export default function SpecialProduct() {
             {
                 spacialProducts.map((product, index)=> <SpecialProductCard product={product} key={index}/>)
             }
-            </div>            
+            </div>         
+            <>     
+    </>   
         </div>
     )
 }
