@@ -1,6 +1,8 @@
 import React from 'react';
-import { Carousel } from 'antd';
+import { Button, Carousel, Flex } from 'antd';
 import { IoIosStar } from "react-icons/io";
+import { QuestionCircleOutlined } from '@ant-design/icons';
+import { FloatButton } from 'antd';   
 
 const contentStyle = {
     margin: 0,
@@ -73,6 +75,13 @@ export default function SpecialOfferCard() {
                             <div className="relative">
                             <img src={product.images[0]} className='w-full h-full object-cover group-hover:opacity-0 transition-all duration-500' style={contentStyle} />
                             <img src={product.images[1]} className='w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-all duration-700 absolute -translate-x-full group-hover:translate-x-0 top-0 left-0' style={contentStyle} />
+
+                            <div className="absolute w-full flex justify-between top-5 px-4">                                                           
+                            <Button 
+                            type="primary"  
+                            size="middle" style={{borderRadius: "0px", color:"#fff", background: "#222"}} >New</Button>
+                                                  
+                            </div>
                             </div>
                             <div className="pt-2">
                                 <div className="">
@@ -80,9 +89,10 @@ export default function SpecialOfferCard() {
                                         {[...Array(5).keys()].map((_, index) => <IoIosStar className='text-primary text-lg' />)}
                                         <span className='text-lg font-semibold ps-2'>4.3</span>
                                     </span>
+                                <FloatButton icon={IoIosStar} />
                                     <p className='text-xl font-bold'>{product.name}</p>
                                     <p className='text-lg font-bold'>${product.discount_price} <del className='text-accent'>${product.previous_price}</del></p>
-                                </div>
+                                </div>                                                           
                             </div>
                         </div>
                     )}

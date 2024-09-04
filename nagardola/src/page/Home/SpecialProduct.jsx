@@ -1,17 +1,69 @@
-import { Button } from 'antd'
+import { Button, FloatButton } from 'antd'
 import React, { useState } from 'react'
+import { IoIosStar } from 'react-icons/io'
+import SpecialProductCard from '../../components/SpecialProductCard'
+
+const spacialProducts = [
+    {
+        name: "Greciilooks Women's Stylish Top",
+        discount_price: 100.00,
+        previous_price: 140.00,
+        images: [
+            "https://themes.pixelstrap.net/katie/assets/images/product/product-3/8.jpg",
+            "https://themes.pixelstrap.net/katie/assets/images/product/product-3/12.jpg"
+        ]
+    },
+    {
+        "name": "Vibrant Summer Dress",
+        "discount_price": 75.00,
+        "previous_price": 100.00,
+        "images": [
+            "https://themes.pixelstrap.net/katie/assets/images/product/product-3/5.jpg",
+            "https://themes.pixelstrap.net/katie/assets/images/product/product-3/6.jpg"
+        ]
+    },
+    {
+        "name": "Elegant Evening Gown",
+        "discount_price": 150.00,
+        "previous_price": 200.00,
+        "images": [
+            "https://themes.pixelstrap.net/katie/assets/images/product/product-3/5.jpg",
+            "https://themes.pixelstrap.net/katie/assets/images/product/product-3/6.jpg"
+        ]
+    },
+    {
+        "name": "Casual Denim Jacket",
+        "discount_price": 60.00,
+        "previous_price": 80.00,
+       "images": [
+            "https://themes.pixelstrap.net/katie/assets/images/product/product-3/5.jpg",
+            "https://themes.pixelstrap.net/katie/assets/images/product/product-3/6.jpg"
+        ]
+    },
+    {
+        "name": "Classic White Shirt",
+        "discount_price": 40.00,
+        "previous_price": 55.00,
+        "images": [
+            "https://themes.pixelstrap.net/katie/assets/images/product/product-3/5.jpg",
+            "https://themes.pixelstrap.net/katie/assets/images/product/product-3/6.jpg"
+        ]
+    }
+
+
+]
 
 export default function SpecialProduct() {
         const [selectedButton, setSelectedButton] = useState("new_product")
 
     return (
         <div className='section container'>
-            <div className="flex items-center justify-between">
-                <div className="">
-                    <p className='sub_title flex items-center'>Trandy collecion <span className='w-[70px] inline-block bg-accent/30 h-1 ms-3'></span></p>
+            <div className="flex  mb-10 items-center md:flex-row flex-col md:justify-between">
+                <div className="mb-5 md:mb-0">
+                    <p className='sub_title flex justify-center items-center'>Trandy collecion <span className='w-[70px] inline-block bg-accent/30 h-1 ms-3'></span></p>
                     <h1 className='title'>Special Product</h1>
                 </div>
-            <div className="flex items-center gap-5 mt-auto">
+            <div className="flex overflow-x-auto items-center gap-5 mt-auto">
             <Button 
             onClick={()=>setSelectedButton("new_product")}
             size="large" className={`${selectedButton === "new_product" && "bg-primary text-white"} rounded-none  font-semibold`}>
@@ -29,7 +81,11 @@ export default function SpecialProduct() {
             </Button>
             </div>
             </div>
-
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 gap-5">                
+            {
+                spacialProducts.map((product, index)=> <SpecialProductCard product={product} key={index}/>)
+            }
+            </div>            
         </div>
     )
 }
