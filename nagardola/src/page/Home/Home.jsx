@@ -6,6 +6,9 @@ import SpecialOffer from './SpecialOffer'
 import StyleBanner from './StyleBanner'
 import SpecialProduct from './SpecialProduct'
 import SaleProduct from './SaleProduct'
+import TopBrands from './TopBrands'
+import Subscribe from './Subscribe'
+import Testimonial from './Testimonial'
 
 
 export default function Home() {
@@ -17,6 +20,9 @@ export default function Home() {
     <SpecialProduct />
     <StyleBanner />
     <SaleProduct />
+    <TopBrands />    
+    <Subscribe />
+    <Testimonial />
     </>
   )
 }

@@ -66,8 +66,10 @@ export default function SpecialOfferCard() {
     return (
         <div className="p-4 border rounded-lg">
             <h2 className='heading pb-3'>Special Offer</h2>
-            <Carousel arrows infinite={false}
-                // dots={false}
+            <Carousel 
+            autoplay
+            autoplaySpeed={2000}
+            arrows             
             >
                 {
                     spacialProducts.map((product, index) =>
@@ -88,8 +90,7 @@ export default function SpecialOfferCard() {
                                     <span className='flex items-center gap-1 '>
                                         {[...Array(5).keys()].map((_, index) => <IoIosStar className='text-primary text-lg' />)}
                                         <span className='text-lg font-semibold ps-2'>4.3</span>
-                                    </span>
-                                <FloatButton icon={IoIosStar} />
+                                    </span>                                
                                     <p className='text-xl font-bold'>{product.name}</p>
                                     <p className='text-lg font-bold'>${product.discount_price} <del className='text-accent'>${product.previous_price}</del></p>
                                 </div>                                                           
