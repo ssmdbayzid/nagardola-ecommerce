@@ -79,7 +79,7 @@ export default function ProductViewModal({ product }) {
             Add to Card
           </Button>
         <Button className='bg-primary text-white' size='large'>
-            View Details
+            <a href="/product/15">View Details</a> 
           </Button>
         </div>        
       </div>
