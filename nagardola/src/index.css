@@ -37,14 +37,14 @@
         @apply text-secondary text-3xl  leading-[48px] font-bold;
     }
     .text_para {
-        @apply text-accent text-[18px] leading-[28px] font-semibold;
+        @apply text-accent text-[18px] leading-[28px] ;
     }
     .sub_title {
         @apply text-accent text-[20px] leading-[28px] font-semibold;
     }
 
     .footer_text {
-        @apply text-white hover:text-primary sub_title hover:tracking-widest transition-all duration-300 ease-in-out mb-3 cursor-pointer;
+        @apply text-white hover:text-primary  hover:tracking-widest transition-all duration-300 ease-in-out mb-3 cursor-pointer;
     }
 }
 
@@ -52,9 +52,6 @@
     color: rgb(var(--primary-color));
     border-color: rgb(var(--primary-color));    
 }
-
-
-
 
 .ant-carousel .slick-slider button {  
     color: #222;
@@ -75,3 +72,21 @@
     left: 40%;
     --tw-translate-y: -50%;
 }
+
+.ant-tabs .ant-tabs-tab.ant-tabs-tab .ant-tabs-tab-btn {
+    font-weight: 500;
+    font-size: 20px;
+    color: rgb(var(--accent-color));
+}
+
+.ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+    font-weight: 500;
+    font-size: 20px;
+    color: rgb(var(--primary-color));
+}
+
+.ant-tabs .ant-tabs-ink-bar {
+    position: absolute;
+    background: rgb(var(--primary-color));
+    pointer-events: none;
+ }

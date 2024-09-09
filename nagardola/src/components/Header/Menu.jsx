@@ -38,9 +38,9 @@ export default function Menu() {
     const [count, setCount] = useState(0)
 
   return (
-    <div className='container flex items-center justify-between py-2'>
+    <div className='container flex items-center justify-between py-3'>
         <div className="logo">
-            <img src="https://themes.pixelstrap.net/katie/assets/images/logo/logo.png" alt="" className='w-[150px]'/>
+           <a href="/"> <img src="https://themes.pixelstrap.net/katie/assets/images/logo/logo.png" alt="" className='w-[150px]'/></a>
         </div>
     <ul className='flex items-center gap-5 text-accent font-semibold'>
         {navLinks.map(link=> 

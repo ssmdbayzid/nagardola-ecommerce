@@ -104,7 +104,7 @@ https://themes.pixelstrap.net/katie/assets/images/logos/7.png
 // Subscribe 
 https://themes.pixelstrap.net/katie/assets/images/banner/banner-6.png
 
-// Instagram
+// Instagram (https://play.tailwindcss.com/OjcBiQQV1w )
 https://themes.pixelstrap.net/katie/assets/images/instagram/6.jpg
 https://themes.pixelstrap.net/katie/assets/images/instagram/7.jpg
 https://themes.pixelstrap.net/katie/assets/images/instagram/8.jpg

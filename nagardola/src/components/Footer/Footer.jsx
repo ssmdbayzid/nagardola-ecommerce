@@ -75,18 +75,15 @@ export default function Footer() {
 
   return (
     <div className="mt-20 bg-[url('https://themes.pixelstrap.net/katie/assets/css/fc4584f9f8a0cf77ff69.jpg')] bg-cover bg-center bg-no-repeat">
-      <div className="container py-10 grid grid-cols-5 gap-5">
+      <div className="container py-20 grid grid-cols-5 gap-5">
         <div className="">
           <img
           className='mb-2'
           src="https://themes.pixelstrap.net/katie/assets/images/logo/logo-white-1.png" alt="" />
           <div className="flex gap-2">
 
-          </div>
-          <p className=' flex flex-start  '>
-            <IoLocationOutline className='w-16 h-16 mr-4 text-white'/> 
-            <h2 className='footer_text text-flex text-wrap '>Address: Suite 3245 Cottonwood, United States</h2>
-             </p>
+          </div>          
+          <p className='footer_text flex items-center'> <IoLocationOutline  className='w-10 h-10 mr-3'/> Address: Suite 3245 Cottonwood, United States</p>
           <p className='footer_text flex items-center'> <BsTelephone  className='mr-3'/> + 185659635</p>
           <p className='footer_text flex items-center'> <BsTelephone  className='mr-3'/> contact@katie.com</p>          
         </div>
