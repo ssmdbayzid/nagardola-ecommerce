@@ -3,21 +3,15 @@ import React, { useState } from 'react'
 import { FaStar } from "react-icons/fa6";
 import { Flex, Progress } from 'antd';
 import ReviewModal from './ReviewModal';
+import Comments from './Comments';
 
 
 export default function ReviewTab({product}) {
   const [openModal, setOpenModal] = useState(false)
-  
-  const customHeader = <>
-  <h2 className='title'>
-  Write A Review
-  </h2>
-  </>
-
 
   return (
     <div className='flex gap-5'>
-      <div className="w-1/3 border-r">
+      <div className="w-1/3">
       <div className="flex gap-2">
       <h2 className='text-5xl font-bold'>4.5</h2>
       <div className="">
@@ -52,15 +46,26 @@ export default function ReviewTab({product}) {
       Write a remove
      </Button>    
       </div>
-      <div className="w-2/3"></div>
+      <div className="w-2/3 border-r">
+      <Comments className=""  />
+      </div>
       <Modal      
       centered
       open={openModal}          
-      onCancel={()=>setOpenModal(!openModal)}      
-      customHeader={customHeader}
+      onCancel={()=>setOpenModal(!openModal)}            
       closeIcon={false}
+      footer={false}
+      styles={{
+        mask: {
+          backdropFilter:'blur(2px)',
+        },
+      }}
       >
-        <ReviewModal product={product} />
+        <ReviewModal 
+        openModal={openModal}
+        setOpenModal={setOpenModal}
+        product={product} 
+        />
       </Modal>
     </div>
   )

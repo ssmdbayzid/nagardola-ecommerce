@@ -61,19 +61,9 @@ export default function ProductDetails() {
       key: "1",
       label: "Description",
       children: <DescriptionTab product={product} />
-    },
+    },    
     {
       key: "2",
-      label: "Specification",
-      children: <SpecificationTab product={product} />
-    },
-    {
-      key: "3",
-      label: "Q & A",
-      children: <QNATabs product={product} />
-    },
-    {
-      key: "4",
       label: "Reviews",
       children: <ReviewTab product={product} />
     },
