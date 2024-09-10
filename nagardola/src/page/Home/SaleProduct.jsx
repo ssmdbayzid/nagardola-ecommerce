@@ -3,6 +3,7 @@ import React from 'react'
 import { IoIosStar } from 'react-icons/io'
 
 export default function SaleProduct() {
+    
     return (
         <div className='section container flex gap-4 '>
             <div className="w-1/2 relative overflow-hidden">

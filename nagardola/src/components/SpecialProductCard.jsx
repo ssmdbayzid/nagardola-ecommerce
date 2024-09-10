@@ -16,8 +16,7 @@ const contentStyle = {
     textAlign: 'center',
     background: '#364d79',
 };
-export default function SpecialProductCard({ product }) {
-    const draggleRef = useRef(null);
+export default function SpecialProductCard({ product }) {    
     const [openModal, setOpenModal] = useState(false);
     
     const handleOk = () => {
@@ -74,7 +73,7 @@ export default function SpecialProductCard({ product }) {
                         </span>
 
                         <p className='text-xl font-bold  text-nowrap text-ellipsis overflow-hidden'>{product.name}</p>
-                        <p className='text-lg font-bold'>${product.discount_price} <del className='text-accent'>${product.previous_price}</del></p>
+                        <p className='text-lg font-bold'>${product.discountPrice} <del className='text-accent'>${product.price}</del></p>
                     </div>
                 </div>
             </div>

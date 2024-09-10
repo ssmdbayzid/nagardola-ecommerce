@@ -2,6 +2,7 @@ import { Button, FloatButton, Modal } from 'antd'
 import React, { useState } from 'react'
 import { IoIosStar } from 'react-icons/io'
 import SpecialProductCard from '../../components/SpecialProductCard'
+import { productData } from '../../assets/data/data'
 
 const spacialProducts = [
     {
@@ -35,7 +36,7 @@ const spacialProducts = [
         "name": "Casual Denim Jacket",
         "discount_price": 60.00,
         "previous_price": 80.00,
-       "images": [
+        "images": [
             "https://themes.pixelstrap.net/katie/assets/images/product/product-3/5.jpg",
             "https://themes.pixelstrap.net/katie/assets/images/product/product-3/6.jpg"
         ]
@@ -54,8 +55,7 @@ const spacialProducts = [
 ]
 
 export default function SpecialProduct() {
-        const [selectedButton, setSelectedButton] = useState("new_product");
-      
+    const [selectedButton, setSelectedButton] = useState("new_product");
 
     return (
         <div className='section container'>
@@ -64,31 +64,31 @@ export default function SpecialProduct() {
                     <p className='sub_title flex justify-center items-center'>Trandy collecion <span className='w-[70px] inline-block bg-accent/30 h-1 ms-3'></span></p>
                     <h1 className='title'>Special Product</h1>
                 </div>
-            <div className="flex overflow-x-auto items-center gap-5 mt-auto">
-            <Button 
-            onClick={()=>setSelectedButton("new_product")}
-            size="large" className={`${selectedButton === "new_product" && "bg-primary text-white"} rounded-none  font-semibold`}>
-                New Products
-            </Button>
-            <Button
-            onClick={()=>setSelectedButton("featured")}            
-            size="large" className={`${selectedButton === "featured" && "bg-primary text-white"} rounded-none  font-semibold`}>
-                Featured Products
-            </Button>
-            <Button 
-            onClick={()=>setSelectedButton("best_seller")}                        
-            size="large" className={`${selectedButton === "best_seller" && "bg-primary text-white"} rounded-none  font-semibold`}>
-                Best Seller
-            </Button>
+                <div className="flex overflow-x-auto items-center gap-5 mt-auto">
+                    <Button
+                        onClick={() => setSelectedButton("new_product")}
+                        size="large" className={`${selectedButton === "new_product" && "bg-primary text-white"} rounded-none  font-semibold`}>
+                        New Products
+                    </Button>
+                    <Button
+                        onClick={() => setSelectedButton("featured")}
+                        size="large" className={`${selectedButton === "featured" && "bg-primary text-white"} rounded-none  font-semibold`}>
+                        Featured Products
+                    </Button>
+                    <Button
+                        onClick={() => setSelectedButton("best_seller")}
+                        size="large" className={`${selectedButton === "best_seller" && "bg-primary text-white"} rounded-none  font-semibold`}>
+                        Best Seller
+                    </Button>
+                </div>
             </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 gap-5">
+                {
+                    productData.map((product, index) => <SpecialProductCard product={product} key={index} />)
+                }
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 gap-5">                
-            {
-                spacialProducts.map((product, index)=> <SpecialProductCard product={product} key={index}/>)
-            }
-            </div>         
-            <>     
-    </>   
+            <>
+            </>
         </div>
     )
 }

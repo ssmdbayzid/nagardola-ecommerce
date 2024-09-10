@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Card } from 'antd';
+import { Button, Card, Tooltip } from 'antd';
 import { Carousel } from 'antd';
 import { MinusCircleOutlined, MinusOutlined, PlusOutlined } from '@ant-design/icons';
 import { HiOutlineShoppingBag  } from "react-icons/hi2"
@@ -28,19 +28,22 @@ export default function ProductViewModal({ product }) {
       <div class="w-full md:w-1/2 px-4">
         <h2 class="title ">Premium Wireless</h2>        
         <div class="mb-2">
-          <span class="text-xl font-bold mr-2">$349.99</span>
-          <span class="text-gray-500 line-through">$399.99</span>
+          <span class="text-xl font-bold mr-2">${product.discountPrice}</span>
+          <del class=" text_para">${product.price}</del>
         </div>
 
         <div class="mb-2">
           <h3 class="text-lg font-semibold mb-2">Color:</h3>
-          <div class="flex space-x-1">
+          <div class="flex space-x-2">           
             <button
-              class="w-6 h-6 bg-black rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"></button>
+              class="w-6 h-6 bg-black rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">                
+            </button>                      
             <button
-              class="w-6 h-6 bg-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300"></button>
+              class="w-6 h-6 bg-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300">                
+            </button>                      
             <button
-              class="w-6 h-6 bg-blue-500 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"></button>
+              class="w-6 h-6 bg-blue-500 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">                
+            </button>           
           </div>
         </div>
         <h3 className='sub_title text-secondary'>Descripion</h3>      

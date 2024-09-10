@@ -15,47 +15,53 @@ import DescriptionTab from './DescriptionTab';
 import SpecificationTab from './SpecificationTab';
 import QNATabs from './QNATabs';
 import ReviewTab from './ReviewTab';
+import { productData } from '../../assets/data/data';
 
 
-const product = [  
-    {
-        name: "Greciilooks Women's Stylish Top",
-        discount_price: 100.00,
-        previous_price: 140.00,
-        images: [
-            "https://themes.pixelstrap.net/katie/assets/images/product/product-3/8.jpg",
-            "https://themes.pixelstrap.net/katie/assets/images/product/product-3/12.jpg"
-        ],
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis esse aspernatur voluptatibus quas eum, nam at quae, accusantium autem totam eligendi? Tempora possimus sed praesentium aliquid inventore, ut obcaecati provident?",
-        details: "Experience the perfect blend of comfort and style with our Summer Breeze Cotton Dress. Crafted from 100% premium cotton, this dress offers a soft and breathable feel, making it ideal for warm weather. The lightweight fabric ensures you stay cool and comfortable throughout the day.\n \n Perfect for casual outings, beach trips, or summer parties. Pair it with sandals for a relaxed look or dress it up with heels and accessories for a more polished ensemble",
-        product_Specifications: [
-        "100% Premium Cotton",
-        "A-line silhouette with a flattering fit",
-        "Knee-length for versatile styling",
-        "V-neck for a touch of elegance",
-        "Short sleeves for a casual look",
-        "Available in solid colors and floral prints",
-        ],
-        washing_Instructions: [
-          "Use cold water for washing",
-          "Use a low heat setting for drying.",
-          "Avoid using bleach on this fabric.",
-          "Use a low heat setting when ironing.",
-          "Do not take this item to a dry cleaner."
-        ],
-        size_Fit: [
-          "The model (height 5'8) is wearing a size S",
-          "Measurements taken from size Small",
-          "Chest: 30",
-          "Length: 20"
-        ]
-      },   
-]
+// const product = [  
+//     {
+//         name: "Greciilooks Women's Stylish Top",
+//         discount_price: 100.00,
+//         previous_price: 140.00,
+//         images: [
+//             "https://themes.pixelstrap.net/katie/assets/images/product/product-3/8.jpg",
+//             "https://themes.pixelstrap.net/katie/assets/images/product/product-3/12.jpg"
+//         ],
+//         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis esse aspernatur voluptatibus quas eum, nam at quae, accusantium autem totam eligendi? Tempora possimus sed praesentium aliquid inventore, ut obcaecati provident?",
+//         details: "Experience the perfect blend of comfort and style with our Summer Breeze Cotton Dress. Crafted from 100% premium cotton, this dress offers a soft and breathable feel, making it ideal for warm weather. The lightweight fabric ensures you stay cool and comfortable throughout the day.\n \n Perfect for casual outings, beach trips, or summer parties. Pair it with sandals for a relaxed look or dress it up with heels and accessories for a more polished ensemble",
+//         product_Specifications: [
+//         "100% Premium Cotton",
+//         "A-line silhouette with a flattering fit",
+//         "Knee-length for versatile styling",
+//         "V-neck for a touch of elegance",
+//         "Short sleeves for a casual look",
+//         "Available in solid colors and floral prints",
+//         ],
+//         washing_Instructions: [
+//           "Use cold water for washing",
+//           "Use a low heat setting for drying.",
+//           "Avoid using bleach on this fabric.",
+//           "Use a low heat setting when ironing.",
+//           "Do not take this item to a dry cleaner."
+//         ],
+//         size_Fit: [
+//           "The model (height 5'8) is wearing a size S",
+//           "Measurements taken from size Small",
+//           "Chest: 30",
+//           "Length: 20"
+//         ]
+//       },   
+// ]
 
 export default function ProductDetails() {
   const [size, setSize] = useState('s')
   const [color, setColor] = useState('golded')
 
+  
+
+  const product = productData.filter(product=>product.name === "Elegant Linen Shirt");
+  
+    
   const items = [
     {
       key: "1",
@@ -81,20 +87,20 @@ export default function ProductDetails() {
      {product.map(pro=> 
      <div className="flex flex-start  gap-5">
         <div className=" w-1/2 h-[500px] sticky top-10 ">
-          <img src={pro.images[0]} className='h-full w-full object-fill' alt="" />
+          <img src={pro.images[0]} className='h-full w-full object-contain' alt="" />
         </div>
         <div className="w-1/2 float-left">
         <Button size="large" className='bg-accent/10 border-none'>Move Fast</Button>
         <h2 className='title'>{pro.name}</h2>
-        <h3 className='heading font-bold flex items-center gap-3'>${pro.discount_price} <del className='text-accent'>${pro.previous_price}</del>
-        <Button className='text-red-600 bg-red-100 border-none font-  bold'>{pro.previous_price / pro.discount_price * 10 }</Button> </h3>
+        <h3 className='heading font-bold flex items-center gap-3'>${pro.discountPrice} <del className='text_para'>${pro.price}</del>
+        <Button className='text-red-600 bg-red-100 border-none font-  bold'>{(pro.price / pro.discountPrice * 10).toFixed(0)}%</Button> </h3>
         <div className='flex gap-2 items-center'>
           <span className='flex gap-1'>{
           [...Array(5).keys()].map((_,index)=> <FaStar keys={index} className='text-primary'/>)
         }</span>
         <span className='font-semibold text-lg'>4.3</span>      
         </div>
-        <p className='text_para'>{pro.description}</p>
+        <p className='text_para text-ellipsis line-clamp-3 text-justify'>{pro.description}</p>
         <div className="flex items-center gap-3 text-lg text-accent py-3">
           <span className="flex items-center gap-2">
           <RxRulerHorizontal />

@@ -3,6 +3,7 @@ import { Button, Carousel, Flex } from 'antd';
 import { IoIosStar } from "react-icons/io";
 import { QuestionCircleOutlined } from '@ant-design/icons';
 import { FloatButton } from 'antd';   
+import { productData } from '../assets/data/data';
 
 const contentStyle = {
     margin: 0,
@@ -63,6 +64,7 @@ const spacialProducts = [
 
 ]
 export default function SpecialOfferCard() {
+        
     return (
         <div className="p-4 border rounded-lg">
             <h2 className='heading pb-3'>Special Offer</h2>
@@ -72,7 +74,7 @@ export default function SpecialOfferCard() {
             arrows             
             >
                 {
-                    spacialProducts.map((product, index) =>
+                    productData.slice(0, 3).map((product, index) =>
                         <div keys={index} className='group '>
                             <div className="relative">
                             <img src={product.images[0]} className='w-full h-full object-cover group-hover:opacity-0 transition-all duration-500' style={contentStyle} />
@@ -92,7 +94,7 @@ export default function SpecialOfferCard() {
                                         <span className='text-lg font-semibold ps-2'>4.3</span>
                                     </span>                                
                                     <p className='text-xl font-bold'>{product.name}</p>
-                                    <p className='text-lg font-bold'>${product.discount_price} <del className='text-accent'>${product.previous_price}</del></p>
+                                    <p className='text-lg font-bold'>${product.discountPrice} <del className='text-accent'>${product.price}</del></p>
                                 </div>                                                           
                             </div>
                         </div>

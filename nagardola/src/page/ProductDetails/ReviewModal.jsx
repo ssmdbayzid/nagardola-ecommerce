@@ -4,11 +4,11 @@ import React, { useState } from 'react'
 export default function ReviewModal({ product, openModal, setOpenModal }) {
   const [rating, setRating] = useState(0)
 
-  console.log(rating)
+  
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
-    console.log(form.comment.value)
+    // console.log(form.comment.value)
   }
   return (
     <div>
@@ -23,7 +23,7 @@ export default function ReviewModal({ product, openModal, setOpenModal }) {
           <img src={prod.images[0]} className='w-24' alt="" />
           <div className="">
             <h2 className='sub_title text-secondary'>{prod.name}</h2>
-            <p className='sub_title'>${(prod.discount_price).toFixed(2)} <del>${(prod.previous_price).toFixed(2)}</del></p>
+            <p className='sub_title text-secondary font-bold'>${(prod.discountPrice).toFixed(2)} <del className='text_para'>${(prod.price).toFixed(2)}</del></p>
           </div>
         </div>
 
