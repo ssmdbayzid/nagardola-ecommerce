@@ -53,10 +53,10 @@ export const productData = [
       "discountPrice": 59.99,
       "rating": 4.7,
       "images": [
+        "https://themes.pixelstrap.net/katie/assets/images/product/product-3/12.jpg",            
             "https://themes.pixelstrap.net/katie/assets/images/product/product-3/8.jpg",
             "https://themes.pixelstrap.net/katie/assets/images/product/product-3/12.jpg",            
             "https://themes.pixelstrap.net/katie/assets/images/product/product-3/8.jpg",
-            "https://themes.pixelstrap.net/katie/assets/images/product/product-3/12.jpg",            
         ],
       "comments": [
         {
