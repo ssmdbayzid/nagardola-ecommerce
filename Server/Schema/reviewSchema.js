@@ -5,4 +5,5 @@ const  reviewSchema = new mongoose.Schema({
     comment: {type: String, required: true},
 }, {timeStamps: true});
 
-module.exports = mongoose.model("Review", reviewSchema);
+const Review = mongoose.model("Review", reviewSchema);
+module.exports = Review;

@@ -1,29 +1,17 @@
-export const productData = [
+export const productData = 
+[
     {
         "name": "Elegant Linen Shirt",
         "price": 59.99,
         "discountPrice": 39.99,
-        "rating": 4.5,
+        "totalRating": 0,
         "images": [
             "https://themes.pixelstrap.net/katie/assets/images/product/product-3/3.jpg",
             "	https://themes.pixelstrap.net/katie/assets/images/product/product-3/18.jpg",
             "https://themes.pixelstrap.net/katie/assets/images/svg-icon/3.svg",
             "https://themes.pixelstrap.net/katie/assets/images/svg-icon/4.svg",
         ],
-        "comments": [
-          {
-            "user": "Sarah L.",
-            "comment": "Beautiful shirt with high-quality fabric. Fits perfectly and looks great!"
-          },
-          {
-            "user": "Mike T.",
-            "comment": "The discount made this a great deal. The color is just as pictured."
-          },
-          {
-            "user": "Emma W.",
-            "comment": "I was impressed with the fast delivery and the shirt’s comfort."
-          }
-        ],
+        "reviews": [],
         "details": "This Elegant Linen Shirt is designed for those who value both style and comfort. Crafted from premium linen, it offers a breathable and lightweight feel, perfect for both casual and semi-formal occasions. The shirt features a classic button-down design, a tailored fit, and a crisp collar that adds a touch of sophistication. Available in a range of colors to suit various tastes, this shirt is an excellent addition to any wardrobe. Whether you’re dressing up for a special event or keeping it casual, this versatile piece ensures you look your best while staying comfortable throughout the day.",
         "availableColors": ["White", "Navy Blue", "Light Grey", "Beige"],
         "size": ["Small", "Medium", "Large"],
@@ -51,76 +39,64 @@ export const productData = [
       "name": "Classic Denim Jacket",
       "price": 89.99,
       "discountPrice": 59.99,
-      "rating": 4.7,
+      "totalRating": 0,
       "images": [
         "https://themes.pixelstrap.net/katie/assets/images/product/product-3/12.jpg",            
             "https://themes.pixelstrap.net/katie/assets/images/product/product-3/8.jpg",
             "https://themes.pixelstrap.net/katie/assets/images/product/product-3/12.jpg",            
             "https://themes.pixelstrap.net/katie/assets/images/product/product-3/8.jpg",
         ],
-      "comments": [
-        {
-          "user": "John D.",
-          "comment": "Great quality and fit. Perfect for layering!"
-        },
-        {
-          "user": "Linda B.",
-          "comment": "The jacket looks even better in person. Very happy with my purchase."
-        }
-      ],
-      "details": "The Classic Denim Jacket combines durability with timeless style. Made from high-quality cotton denim, this jacket offers a comfortable fit while maintaining a structured look. It features a classic button front, two chest pockets, and adjustable cuffs, making it a versatile piece for any wardrobe. Perfect for layering over shirts or sweaters, this jacket is ideal for both casual and semi-formal occasions.",
+        "details": "The Classic Denim Jacket combines durability with timeless style. Made from high-quality cotton denim, this jacket offers a comfortable fit while maintaining a structured look. It features a classic button front, two chest pockets, and adjustable cuffs, making it a versatile piece for any wardrobe. Perfect for layering over shirts or sweaters, this jacket is ideal for both casual and semi-formal occasions.",
       "availableColors": ["Indigo", "Black", "Light Blue"],
       "size": ["Small", "Medium", "Large", "X-Large"],
       "description": "The Classic Denim Jacket is a must-have staple for any fashion-forward individual. Crafted from robust cotton denim, it ensures long-lasting wear and a perfect fit. The jacket's traditional design includes a button-down closure, multiple pockets, and adjustable cuffs for added convenience. Ideal for layering in cooler weather or adding a touch of edge to any outfit, this jacket is versatile and easy to style.",
-      "specification": {
-        "fabric": "100% Cotton Denim",
-        "closure": "Button-down",
-        "pockets": "Two chest pockets",
-        "cuffs": "Adjustable"
-      },
+
+        "reviews": [],
+                   
+      "specification": [
+        "fabric 100% Cotton Denim",
+        "closure Button-down",
+        "pockets Two chest pockets",
+        "cuffs Adjustable"
+      ],
+
       "washingInstructions": [
         "Machine wash cold with similar colors",
         "Tumble dry low",
         "Iron on medium heat",
         "Do not bleach"
       ],
-      "sizeAndFit": {
-        "modelSize": "Large",
-        "fit": "Regular fit; consider sizing up for layering"
-      },
-      "soldBy": "UrbanStyle Co."
+      "sizeAndFit": [
+        "modelSize Large",
+        "fit Regular fit; consider sizing up for layering"
+      ],
+      "soldBy" : "UrbanStyle Co."
     },
     {
       "name": "Chic Wool Scarf",
       "price": 39.99,
       "discountPrice": 29.99,
-      "rating": 4.8,
+      "totalRating": 0,
       "images": [
             "https://themes.pixelstrap.net/katie/assets/images/product/product-3/8.jpg",
             "https://themes.pixelstrap.net/katie/assets/images/product/product-3/12.jpg",            
             "https://themes.pixelstrap.net/katie/assets/images/product/product-3/8.jpg",
             "https://themes.pixelstrap.net/katie/assets/images/product/product-3/12.jpg",            
         ],
-      "comments": [
-        {
-          "user": "Rachel K.",
-          "comment": "So soft and warm. Great for winter!"
-        },
-        {
-          "user": "Tom R.",
-          "comment": "Excellent quality and stylish. Worth every penny."
-        }
-      ],
+      "reviews": [],
       "details": "The Chic Wool Scarf adds a touch of elegance to any winter outfit. Made from 100% wool, this scarf provides exceptional warmth and comfort. It features a classic design with fringe details on the ends, making it both practical and stylish. Available in a variety of colors, this scarf is a versatile accessory that complements both casual and formal attire.",
+
       "availableColors": ["Charcoal Grey", "Deep Red", "Navy"],
-      "size": ["One Size"],
+
+      "size": ["Small", "Medium", "Large",],
+
       "description": "Wrap yourself in luxury with the Chic Wool Scarf. Crafted from pure wool, it offers unmatched warmth and softness, perfect for chilly days. The scarf's classic design includes elegant fringe detailing, adding a sophisticated touch to any outfit. Whether you're dressing up for a formal event or keeping it casual, this scarf enhances your look with both style and comfort.",
-      "specification": {
-        "fabric": "100% Wool",
-        "length": "70 inches",
-        "width": "12 inches",
-        "details": "Fringe ends"
-      },
+      "specification": [
+        "100% Wool",
+        "70 inches",
+        "12 inches",
+        "Fringe ends"
+      ],
       "washingInstructions": [
         "Dry clean only",
         "Do not machine wash or tumble dry",
@@ -136,33 +112,24 @@ export const productData = [
       "name": "Sporty Jogger Pants",
       "price": 49.99,
       "discountPrice": 34.99,
-      "rating": 4.6,
+      "totalRating": 0,
       "images" : [
         "https://themes.pixelstrap.net/katie/assets/images/product/product-3/5.jpg",
         "https://themes.pixelstrap.net/katie/assets/images/product/product-3/11.jpg",
         "https://themes.pixelstrap.net/katie/assets/images/product/product-3/5.jpg",
         "https://themes.pixelstrap.net/katie/assets/images/product/product-3/11.jpg",
       ],
-      "comments": [
-        {
-          "user": "Alice M.",
-          "comment": "Comfortable and perfect for workouts or lounging."
-        },
-        {
-          "user": "David S.",
-          "comment": "Great value for the price. Fits well and looks stylish."
-        }
-      ],
+      "reviews": [],
       "details": "Sporty Jogger Pants are designed for both performance and comfort. Made from a blend of cotton and polyester, these pants are perfect for workouts, casual outings, or relaxing at home. They feature an elastic waistband with a drawstring, tapered legs, and ribbed cuffs for a secure fit. Available in various colors, these joggers are a versatile addition to any active wardrobe.",
       "availableColors": ["Black", "Grey", "Olive Green"],
       "size": ["Small", "Medium", "Large", "X-Large"],
       "description": "Stay active and stylish with Sporty Jogger Pants. Constructed from a soft cotton-polyester blend, these joggers offer excellent breathability and flexibility for all your activities. The design includes an elastic waistband with an adjustable drawstring, tapered legs, and ribbed cuffs to keep you comfortable and secure. Ideal for gym sessions or casual wear, these joggers are a practical choice for any athletic wardrobe.",
-      "specification": {
-        "fabric": "Cotton-Polyester Blend",
-        "waistband": "Elastic with drawstring",
-        "leg": "Tapered",
-        "cuffs": "Ribbed"
-      },
+      "specification": [
+        "fabric Cotton-Polyester Blend",
+        "waistband Elastic with drawstring",
+        "leg Tapered",
+        "cuffs Ribbed"
+      ],
       "washingInstructions": [
         "Machine wash cold with similar colors",
         "Tumble dry low",
@@ -179,14 +146,14 @@ export const productData = [
       "name": "Sleek Leather Belt",
       "price": 29.99,
       "discountPrice": 19.99,
-      "rating": 4.4,
+      "totalRating": 0,
       "images" : [
         "https://themes.pixelstrap.net/katie/assets/images/product/product-3/2.jpg",
         "https://themes.pixelstrap.net/katie/assets/images/product/product-3/19.jpg",       
         "https://themes.pixelstrap.net/katie/assets/images/product/product-3/2.jpg",
         "https://themes.pixelstrap.net/katie/assets/images/product/product-3/19.jpg",       
       ],
-      "comments": [
+      "reviews": [
         {
           "user": "Olivia F.",
           "comment": "Quality leather and great craftsmanship. Fits perfectly."
@@ -200,54 +167,45 @@ export const productData = [
       "availableColors": ["Black", "Brown"],
       "size": ["Small", "Medium", "Large"],
       "description": "Add a touch of sophistication to your attire with the Sleek Leather Belt. Crafted from premium genuine leather, this belt is designed for both style and durability. The belt features a sleek, polished metal buckle that complements its classic design. Available in two versatile colors, it is easy to match with any outfit, making it a valuable addition to both casual and formal wardrobes.",
-      "specification": {
-        "material": "Genuine Leather",
-        "buckle": "Polished metal",
-        "width": "1.5 inches",
-        "adjustable": "Yes"
-      },
+      "specification": [
+        "material Genuine Leather",
+        "buckle Polished metal",
+        "width 1.5 inches",
+        "adjustable Yes"
+      ],
       "washingInstructions": [
         "Wipe clean with a damp cloth",
         "Condition leather periodically",
         "Avoid excessive moisture"
       ],
-      "sizeAndFit": {
-        "modelSize": "Medium",
-        "fit": "Adjustable for a custom fit"
-      },
+      "sizeAndFit": [
+        "modelSize: Medium",
+        "fit: Adjustable for a custom fit"
+      ],
       "soldBy": "ClassicAccessories"
     },
     {
         "name": "Classic Canvas Messenger Bag",
         "price": 49.99,
         "discountPrice": 34.99,
-        "rating": 4.6,
+        "totalRating": 0,
         "images" : [
         "https://themes.pixelstrap.net/katie/assets/images/product/product-3/10.jpg",
         "https://themes.pixelstrap.net/katie/assets/images/product/product-3/21.jpg",                    
         "https://themes.pixelstrap.net/katie/assets/images/product/product-3/10.jpg",
         "https://themes.pixelstrap.net/katie/assets/images/product/product-3/21.jpg",                    
       ],
-        "comments": [
-          {
-            "user": "Sarah J.",
-            "comment": "Perfect size for daily use. The canvas material feels sturdy and well-made."
-          },
-          {
-            "user": "Mark D.",
-            "comment": "Great bag with ample space and comfortable to carry. Highly recommend!"
-          }
-        ],
+        "reviews": [],
         "details": "The Classic Canvas Messenger Bag combines functionality with style. Crafted from durable canvas, it features multiple compartments to keep your belongings organized. The adjustable strap ensures comfort, while the classic design makes it suitable for both work and casual outings.",
         "availableColors": ["Navy", "Olive", "Gray"],
         "size": ["One Size"],
         "description": "This versatile messenger bag is ideal for carrying your essentials in style. Made from high-quality canvas, it offers durability and a classic look. The bag features an adjustable strap and multiple pockets for convenience.",
-        "specification": {
-          "material": "Canvas",
-          "closure": "Flap with magnetic snap",
-          "dimensions": "15\" x 11\" x 4\"",
-          "adjustableStrap": "Yes"
-        },
+        "specification": [
+          "material Canvas",
+          "closure Flap with magnetic snap",
+          "dimensions 15\" x 11\" x 4\"",
+          "adjustableStrap Yes"
+        ],
         "washingInstructions": [
           "Spot clean with mild detergent",
           "Air dry"
@@ -262,32 +220,23 @@ export const productData = [
         "name": "Elegant Silk Scarf",
         "price": 79.99,
         "discountPrice": 59.99,
-        "rating": 4.8,
+        "totalRating": 0,
         "images" : [
         "https://themes.pixelstrap.net/katie/assets/images/product/product-3/4.jpg",
         "https://themes.pixelstrap.net/katie/assets/images/product/product-3/16.jpg",                    
         "https://themes.pixelstrap.net/katie/assets/images/product/product-3/11.jpg",
         "https://themes.pixelstrap.net/katie/assets/images/product/product-3/15.jpg",                    
       ],
-        "comments": [
-          {
-            "user": "Emily T.",
-            "comment": "The silk is incredibly soft and the colors are vibrant. Perfect for any occasion."
-          },
-          {
-            "user": "Liam H.",
-            "comment": "Beautiful scarf with a luxurious feel. Worth every penny."
-          }
-        ],
+        "reviews": [],
         "details": "The Elegant Silk Scarf is a luxurious accessory designed to add a touch of elegance to your outfit. Made from 100% silk, it features a vibrant, intricate design that stands out. Ideal for both casual and formal occasions.",
         "availableColors": ["Red", "Blue", "Green"],
         "size": ["One Size"],
         "description": "This exquisite silk scarf is perfect for adding sophistication to any look. Made from 100% silk, it is both soft and stylish, with a design that complements any outfit.",
-        "specification": {
-          "material": "100% Silk",
-          "dimensions": "70\" x 20\"",
-          "pattern": "Various patterns"
-        },
+        "specification": [
+          "material 100% Silk",
+          "dimensions 70\" x 20\"",
+          "pattern Various patterns"
+        ],
         "washingInstructions": [
           "Dry clean only"
         ],
@@ -301,33 +250,24 @@ export const productData = [
         "name": "Modern Stainless Steel Watch",
         "price": 149.99,
         "discountPrice": 119.99,
-        "rating": 4.7,
+        "totalRating": 0,
         "images" : [
             "https://themes.pixelstrap.net/katie/assets/images/product/product-3/14.jpg",
             "https://themes.pixelstrap.net/katie/assets/images/product/product-3/10.jpg",                    
             "https://themes.pixelstrap.net/katie/assets/images/product/product-3/13.jpg",
             "https://themes.pixelstrap.net/katie/assets/images/product/product-3/16.jpg",                    
           ],
-        "comments": [
-          {
-            "user": "Daniel K.",
-            "comment": "Sleek design and accurate timekeeping. The stainless steel feels solid and durable."
-          },
-          {
-            "user": "Ava L.",
-            "comment": "A great watch for both formal and casual wear. The price is reasonable for the quality."
-          }
-        ],
+        "reviews": [],
         "details": "The Modern Stainless Steel Watch combines precision and style. Featuring a stainless steel band and a minimalistic face, this watch is designed for versatility and durability. Ideal for both everyday wear and special occasions.",
         "availableColors": ["Silver", "Black"],
         "size": ["One Size"],
         "description": "This sophisticated stainless steel watch offers a modern look with reliable performance. Its sleek design and sturdy construction make it a versatile accessory for any wardrobe.",
-        "specification": {
-          "material": "Stainless Steel",
-          "movement": "Quartz",
-          "faceDiameter": "42mm",
-          "waterResistance": "50 meters"
-        },
+        "specification": [
+          "material Stainless Steel",
+          "movement Quartz",
+          "faceDiameter 42mm",
+          "waterResistance 50 meters"
+        ],
         "washingInstructions": [
           "Wipe with a soft, dry cloth"
         ],
@@ -341,32 +281,23 @@ export const productData = [
         "name": "Cozy Wool Knit Sweater",
         "price": 89.99,
         "discountPrice": 69.99,
-        "rating": 4.5,
+        "totalRating": 0,
         "images" : [
             "https://themes.pixelstrap.net/katie/assets/images/product/product-3/2.jpg",
             "https://themes.pixelstrap.net/katie/assets/images/product/product-3/17.jpg",                    
             "https://themes.pixelstrap.net/katie/assets/images/product/product-3/1.jpg",
             "https://themes.pixelstrap.net/katie/assets/images/product/product-3/18.jpg",                    
           ],
-        "comments": [
-          {
-            "user": "Chloe M.",
-            "comment": "Incredibly warm and comfortable. The knit is soft and the color is just as pictured."
-          },
-          {
-            "user": "Ethan B.",
-            "comment": "This sweater is perfect for cold weather. Fits well and looks stylish."
-          }
-        ],
+        "reviews": [],
         "details": "The Cozy Wool Knit Sweater is designed for ultimate warmth and comfort. Made from high-quality wool, it features a classic knit pattern and a relaxed fit. Ideal for layering during colder months.",
         "availableColors": ["Charcoal", "Cream", "Burgundy"],
         "size": ["Small", "Medium", "Large"],
         "description": "Stay warm and stylish with this wool knit sweater. The soft wool material ensures comfort, while the classic design makes it a versatile addition to your winter wardrobe.",
-        "specification": {
-          "material": "100% Wool",
-          "pattern": "Knit",
-          "fit": "Relaxed"
-        },
+        "specification": [
+          "material 100% Wool",
+          "pattern Knit",
+          "fit Relaxed"
+        ],
         "washingInstructions": [
           "Hand wash cold",
           "Lay flat to dry"
@@ -379,3 +310,20 @@ export const productData = [
       }
   ]
   
+
+  /*
+
+  # user
+# nagardola
+
+# password
+# lUHgc09rMhC7JVvq
+
+# mongodb+srv://nagardola:<db_password>@cluster0.w9eio.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+MONGO_URL = mongodb+srv://nagardola:lUHgc09rMhC7JVvq@cluster0.w9eio.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+ACCESS_TOKEN = F5xWmkOR3oA6J6bdAJ1pbstTuhIfItF1PQfP26YXk1QlaoKy/YJxPUngyK4kNG9O04aret4D+2qIq9
+BUaQcv+R9Xi014VKNUDZ+YQKEaLHBhJMq6JgehJ56iNbdNJ4+PN7SQwjNdZ8gS76izAwYsSZ7Kuyx2
+PORT = 6000
+*/

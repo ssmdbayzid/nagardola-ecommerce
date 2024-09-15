@@ -1,16 +1,28 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-const dotEnv = require("dotenv");
 const cors = require("cors");
 const productRouter = require("./Routes/ProductRouter");
-dotEnv.config();
+const dotEnv = require("dotenv");
+const mongoose = require("mongoose");
 const port = 5000;
+dotEnv.config();
 
 // Middleware
 app.use(express.json());
 app.use(cors());
 app.use(bodyParser.json());
+
+const connectDatabase = async ()=>{
+    try {
+        await mongoose.connect(process.env.MONGO_URL);
+        console.log("Mongo Database connected")
+    } catch (error) {
+        console.log(error.message);
+    }
+}
+
+connectDatabase().catch(error=>console.log(error.message))
 
 // router
 app.use("/api/v1/products", productRouter);
