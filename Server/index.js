@@ -2,11 +2,13 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const productRouter = require("./Routes/ProductRouter");
 const dotEnv = require("dotenv");
 const mongoose = require("mongoose");
 const port = 5000;
 dotEnv.config();
+
+const productRouter = require("./Routes/ProductRouter");
+const authRouter = require("./Routes/authRouter");
 
 // Middleware
 app.use(express.json());
@@ -26,6 +28,7 @@ connectDatabase().catch(error=>console.log(error.message))
 
 // router
 app.use("/api/v1/products", productRouter);
+app.use("/api/v1/auth", authRouter)
 
 app.get("/", (req, res)=> {
     res.send("Server running")
