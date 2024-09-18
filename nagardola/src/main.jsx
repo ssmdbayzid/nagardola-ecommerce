@@ -8,6 +8,8 @@ import router from './route/router.jsx'
 
 import 'aos/dist/aos.css'; // Import AOS styles
 import AOS from 'aos'; // Import AOS
+import { Provider } from 'react-redux'
+import store from './app/store.js'
 
 // Initialize AOS
 AOS.init({
@@ -18,6 +20,8 @@ AOS.init({
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>      
-    <RouterProvider router={router}/>          
+    <Provider store={store}>
+    <RouterProvider router={router}/>         
+    </Provider> 
   </StrictMode>,
 )

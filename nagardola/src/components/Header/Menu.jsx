@@ -3,6 +3,8 @@ import { CiSearch, CiHeart, CiUser  } from "react-icons/ci";
 import { BsBasket3 } from "react-icons/bs";
 import { ShoppingOutlined } from '@ant-design/icons';
 import { Badge } from 'antd';
+import { useSelector } from 'react-redux'
+
 
 const navLinks = [
     {
@@ -36,7 +38,8 @@ const navLinks = [
 ]
 export default function Menu() {
     const [count, setCount] = useState(0)
-
+    const cartItems = useSelector((state)=>state.cart.cartItems);
+    const favoriteItems = useSelector(state => state.favorite.favoriteItems)    
   return (
     <div className='container flex items-center justify-between py-3'>
         <div className="logo">
@@ -51,12 +54,13 @@ export default function Menu() {
     </ul>
     <div className="flex items-center gap-5 ">
         <CiSearch  className='text-[30px]'/>
-        <div className="relative">
+        
+        <Badge count={favoriteItems.length} showZero color="#cca370">
         <CiHeart className='text-[30px]'/>
-        <span className='absolute -top-1 -right-2 w-5 h-5 rounded-full bg-primary text-white flex items-center justify-center'>1</span>
-        </div>
+        </Badge>
+        
 
-        <Badge count={count} showZero color="#cca370">
+        <Badge count={cartItems.length} showZero color="#cca370">
         <BsBasket3 className="text-2xl" />
         </Badge>
 

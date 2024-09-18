@@ -3,15 +3,18 @@ const Review = require("../Schema/reviewSchema");
 
 exports.postReview = async (req, res)=>{
     try {
-        const _id = req.params.id;
+        const id = req.params.id;
+
+        const data = req.body;        
         const review = await Review.create(req.body);
-
-        await Product.findByIdAndUpdate(_id, {
+               
+        await Product.findByIdAndUpdate(id, {
         $push: {reviews:review._id},
-        $inc: {totalReview:  req.body.rating,}
-        })
+        $inc: {totalRating:  req.body.rating,}
+        })        
+        
 
-      return res.status(200).json({success: true, message: "Thanks for your feedback."});
+      return res.status(200).json({success: true, data,  message: "Thanks for your feedback."});
     } catch (error) {
       return res.status(500).json({success: false, message: error.message})
     }
@@ -20,7 +23,7 @@ exports.postReview = async (req, res)=>{
 exports.getAllReview = async (req, res)=> {
   try {
     const result  = await Review.find();
-    return res.status(200).json({successfull, data: result});
+    return res.status(200).json({success: true, data: result});
   } catch (error) {
     return res.status(500).json({success: false, message: error.message})
   }

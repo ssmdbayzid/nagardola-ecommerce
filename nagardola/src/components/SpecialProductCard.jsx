@@ -7,6 +7,8 @@ import { HiArrowsUpDown, HiOutlineShoppingBag  } from "react-icons/hi2"
 import { IoEyeOutline } from "react-icons/io5";
 
 import ProductViewModal from './ProductViewModal';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../app/features/cartSlice';
 
 const contentStyle = {
     margin: 0,
@@ -26,6 +28,7 @@ export default function SpecialProductCard({ product }) {
         setOpenModal(!openModal);
     };
 
+    const dispatch = useDispatch()
 
 
     return (
@@ -49,7 +52,9 @@ export default function SpecialProductCard({ product }) {
                                 </Tooltip>
 
                                 <Tooltip size="small" color='#CCA270' placement="right" title="Add to Cart">
-                                <Button className='relative -top-3 opacity-0 group-hover:top-0 group-hover:opacity-100 transition-all duration-300 delay-75' icon={<HiOutlineShoppingBag />} shape='circle' />
+                                <Button
+                                onClick={()=>addToCart(product)}
+                                className='relative -top-3 opacity-0 group-hover:top-0 group-hover:opacity-100 transition-all duration-300 delay-75' icon={<HiOutlineShoppingBag />} shape='circle' />
                                 </Tooltip>
                                 
                                 <Tooltip size="small" color='#CCA270' placement="right" title="Compare">

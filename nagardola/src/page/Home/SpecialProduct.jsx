@@ -1,8 +1,9 @@
-import { Button, FloatButton, Modal } from 'antd'
-import React, { useState } from 'react'
+import { Button, FloatButton, Modal, Skeleton } from 'antd'
+import React, { useState, useEffect } from 'react'
 import { IoIosStar } from 'react-icons/io'
 import SpecialProductCard from '../../components/SpecialProductCard'
 import { productData } from '../../assets/data/data'
+import { useGetproductsQuery } from '../../app/features/productApiSlice'
 
 const spacialProducts = [
     {
@@ -55,8 +56,23 @@ const spacialProducts = [
 ]
 
 export default function SpecialProduct() {
+    const  {data, error, isLoading, isFetching, isError} = useGetproductsQuery()
     const [selectedButton, setSelectedButton] = useState("new_product");
+    const [products, setProducts] = useState(null)
 
+    // useEffect(()=>{
+    //     if(data.data){
+    //         setProducts(data.data)
+    //     }
+    // },[data])
+
+    if (isError) return <div>An error has occurred!</div>
+
+    if (isLoading) return <p>Loading....</p>
+  
+
+    
+    
     return (
         <div className='section container'>
             <div className="flex  mb-10 items-center md:flex-row flex-col md:justify-between">
@@ -84,11 +100,22 @@ export default function SpecialProduct() {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 gap-5">
                 {
-                    productData.map((product, index) => <SpecialProductCard product={product} key={index} />)
+                  data?.data &&   data?.data.map((product, index) => <SpecialProductCard product={product} key={index} />)
                 }
-            </div>
-            <>
-            </>
+            </div>        
         </div>
     )
 }
+
+
+/*
+
+{data.map((post) => (
+        <Post
+          key={post.id}
+          id={post.id}
+          name={post.name}
+          disabled={isFetching}
+        />
+      ))}
+*/

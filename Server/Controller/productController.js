@@ -36,7 +36,8 @@ exports.getAllProduct = async (req, res)=>{
 exports.getSingleProduct = async (req, res)=>{    
     try {
         const id = req.params.id;
-        const result = await Product.findById({_id: id});
+        const result = await Product.findById({_id: id})
+        .populate("reviews");
         return res.status(200).json({success: false, message: "Get Data Successfull",data: result});
     } catch (error) {
        return res.status(500).json({success: false, message: error.message})
