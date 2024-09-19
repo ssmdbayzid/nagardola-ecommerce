@@ -47,9 +47,7 @@ export default function ProductViewModal({ product }) {
           </div>
         </div>
         <h3 className='sub_title text-secondary'>Descripion</h3>      
-        <p class=" mb-3">Experience premium sound quality and industry-leading noise cancellation
-          with
-          these wireless headphones. Perfect for music lovers and frequent travelers.</p>     
+        <p class=" mb-3">{product.description}</p>     
           <hr />
           <div class="flex py-2 space-x-2">
             <button
@@ -82,7 +80,7 @@ export default function ProductViewModal({ product }) {
             Add to Card
           </Button>
         <Button className='bg-primary text-white' size='large'>
-            <a href="/product/15">View Details</a> 
+            <a href={`/product/${product._id}`}>View Details</a> 
           </Button>
         </div>        
       </div>

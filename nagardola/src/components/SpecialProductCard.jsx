@@ -9,6 +9,7 @@ import { IoEyeOutline } from "react-icons/io5";
 import ProductViewModal from './ProductViewModal';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../app/features/cartSlice';
+import { addToFavorite } from '../app/features/favoriteSlice';
 
 const contentStyle = {
     margin: 0,
@@ -48,12 +49,14 @@ export default function SpecialProductCard({ product }) {
                             
                             <div className="flex group flex-col gap-1">
                                 <Tooltip size="small" color='#CCA270' title="Add to Wishlist">
-                                <Button icon={<HeartOutlined />} shape='circle' />
+                                <Button
+                                onClick={()=>dispatch(addToFavorite(product))}
+                                icon={<HeartOutlined />} shape='circle' />
                                 </Tooltip>
 
                                 <Tooltip size="small" color='#CCA270' placement="right" title="Add to Cart">
                                 <Button
-                                onClick={()=>addToCart(product)}
+                                onClick={()=>dispatch(addToCart(product))}
                                 className='relative -top-3 opacity-0 group-hover:top-0 group-hover:opacity-100 transition-all duration-300 delay-75' icon={<HiOutlineShoppingBag />} shape='circle' />
                                 </Tooltip>
                                 

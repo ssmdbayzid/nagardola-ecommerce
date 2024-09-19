@@ -8,22 +8,22 @@ export default function ReviewModal({ product, openModal, setOpenModal }) {
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
-    // console.log(form.comment.value)
+    console.log(form.comment.value)
   }
   return (
     <div>
-      {product.map(prod => <div keys={prod.name} className="">
+       <div keys={product.name} className="">
         <div className="flex items-center justify-between pb-2">
           {/* <h2 className='title'>{Write A Review}</h2> */}
-          <h2 className='text-secondary font-bold text-2xl'>{prod.name}</h2>
+          <h2 className='text-secondary font-bold text-2xl'>{product.name}</h2>
           <h2 onClick={() => setOpenModal(!openModal)} className='sub_title cursor-pointer'>X</h2>
         </div>
         <hr />
         <div className="flex items-center gap-3 mt-4">
-          <img src={prod.images[0]} className='w-24' alt="" />
+          <img src={product.images[0]} className='w-24' alt="" />
           <div className="">
-            <h2 className='sub_title text-secondary'>{prod.name}</h2>
-            <p className='sub_title text-secondary font-bold'>${(prod.discountPrice).toFixed(2)} <del className='text_para'>${(prod.price).toFixed(2)}</del></p>
+            <h2 className='sub_title text-secondary'>{product.name}</h2>
+            <p className='sub_title text-secondary font-bold'>${(product.discountPrice).toFixed(2)} <del className='text_para'>${(product.price).toFixed(2)}</del></p>
           </div>
         </div>
 
@@ -50,8 +50,7 @@ export default function ReviewModal({ product, openModal, setOpenModal }) {
               size="large" className='bg-secondary text-white'>Submit</Button>
           </div>
         </form>
-      </div>
-      )}
+      </div>      
     </div>
   )
 }

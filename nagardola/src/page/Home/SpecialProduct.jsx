@@ -58,21 +58,9 @@ const spacialProducts = [
 export default function SpecialProduct() {
     const  {data, error, isLoading, isFetching, isError} = useGetproductsQuery()
     const [selectedButton, setSelectedButton] = useState("new_product");
-    const [products, setProducts] = useState(null)
-
-    // useEffect(()=>{
-    //     if(data.data){
-    //         setProducts(data.data)
-    //     }
-    // },[data])
-
-    if (isError) return <div>An error has occurred!</div>
-
-    if (isLoading) return <p>Loading....</p>
   
-
-    
-    
+    if (isError) return <div>An error has occurred!</div>
+    if (isLoading) return <p>Loading....</p>    
     return (
         <div className='section container'>
             <div className="flex  mb-10 items-center md:flex-row flex-col md:justify-between">
