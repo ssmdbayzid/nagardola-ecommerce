@@ -90,3 +90,20 @@
     background: rgb(var(--primary-color));
     pointer-events: none;
  }
+
+ .ant-drawer-body {
+    padding: 0px !important;
+}
+
+.ant-drawer-body ::-webkit-scrollbar {
+    width: 5px;
+    margin-right: 2px;
+    padding-right: 20px !important;
+}
+
+.ant-drawer-body ::-webkit-scrollbar-thumb {
+    background: rgb(var(--accent-color));    
+    border-radius: 5px;   
+    padding-right: 20px !important;
+
+}

@@ -54,7 +54,10 @@ const cartSlice = createSlice({
         }, 
         getTotal(state){
             state.totalCartQty = state.cartItems.reduce((sum, cartItem)=> sum += cartItem.cartQty, 0);
-            state.cartTotalAmount = state.cartItems.reduce((sum, cartItem)=> sum += cartItem.discountPrice, 0);
+            state.cartTotalAmount = state.cartItems.reduce((sum, cartItem)=> sum += cartItem.discountPrice * cartItem.cartQty, 0);
+        
+          // Update data store to localStorage                
+          localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
         }
     },  
 })
