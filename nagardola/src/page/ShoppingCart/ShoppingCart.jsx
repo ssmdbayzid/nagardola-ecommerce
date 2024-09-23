@@ -4,6 +4,7 @@ import { addToCart, decreateCartQty, getTotal } from '../../app/features/cartSli
 import { Table } from 'antd'
 
 import { FiPlus, FiMinus } from "react-icons/fi";
+import ShoppingSidebar from './ShoppingSidebar';
 
 
 export default function ShoppingCart() {
@@ -17,10 +18,7 @@ export default function ShoppingCart() {
   useEffect(()=>{
     dispatch(getTotal())
   },[dispatch, cart])
-  
-
-  
-  
+      
   const columns = [
     {
       title: 'Product',
@@ -74,9 +72,8 @@ export default function ShoppingCart() {
     total: (item.discountPrice * item.cartQty),
   }))
 
-
   return (
-    <div className='container flex items-start'>
+    <div className='container flex items-start gap-5'>
       <div className="w-2/3">
       <div className="flex items-center justify-between mt-5 pb-5 border-b">
         <h2 className='heading'>Shopping Cart</h2>
@@ -98,7 +95,9 @@ export default function ShoppingCart() {
       />
       </div>
       </div>
-
+      <div className="w-1/3 bg-accent/5 h-full px-3 py-5">
+      <ShoppingSidebar />
+      </div>
     </div>
   )
 }
