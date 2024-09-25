@@ -55,8 +55,8 @@ export default function ShoppingCart() {
                 </div>
                 <hr />
                 <div className="flex gap-3 px-3 mt-3">
-                    <Button  className='rounded-none w-1/2' size="large"><a href="/cart" className='w-full inline-block'>View Cart </a></Button>
-                    <Button className='w-1/2 rounded-none bg-secondary text-white' size="large">Checkout</Button>
+                <a href="/cart" className='block w-1/2 bg-slate-700'><Button  className='rounded-none w-full' size="large">View Cart </Button></a>
+                <a href="/checkout" className='block w-1/2 bg-slate-700'><Button  className=' rounded-none bg-secondary text-white w-full' size="large">Checkout </Button></a>                    
                 </div>
             </div>
         </div>

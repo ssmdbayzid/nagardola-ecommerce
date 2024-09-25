@@ -32,10 +32,9 @@ export default function CheckOut() {
     ]
 
       console.log(cart)
-  return (
-    <div className='container'>
-    <div className="flex mt-5  gap-5 item-start">
-    <div className="w-2/3 sticky top-20">    
+  return (    
+    <div className="container flex mt-5  gap-5 flex-start">
+    <div className="w-2/3 sticky top-10">    
     <p className='pb-3 heading'>Address: </p>  
     <hr />  
     {
@@ -111,7 +110,6 @@ export default function CheckOut() {
             <Button className='w-full mt-5 bg-secondary text-white rounded-none' size='large'><a href="/checkout" className='w-full'>Check Out</a> </Button>
         </div>
     </div>
-    </div>
-    </div>
+    </div>    
   )
 }

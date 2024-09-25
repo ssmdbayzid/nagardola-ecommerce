@@ -107,3 +107,9 @@
     padding-right: 20px !important;
 
 }
+
+:where(.css-dev-only-do-not-override-vn1oyg).ant-menu-light .ant-menu-item-selected{
+    background: rgb(var(--primary-color));
+    color: #fff;
+    border-radius: 0;
+}
