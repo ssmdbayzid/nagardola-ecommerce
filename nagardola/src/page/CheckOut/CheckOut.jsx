@@ -5,36 +5,54 @@ import { Button, Checkbox, Divider } from 'antd'
 import { LuTags } from 'react-icons/lu';
 import { useDispatch, useSelector } from 'react-redux';
 import { getTotal } from '../../app/features/cartSlice';
+import { usePlaceOrderMutation } from '../../app/features/productApiSlice';
+
+
+const address = [
+    {
+        title:"Shipping Address",
+        location: "26, Starts Hollow Colony, Denver, Colorado, United States",
+        post_code: 8004,
+        mobile: "01619-788808",
+    },
+    {
+        title:"Billing Address",
+        location: "201 Maple Drive, Placeholder Town, USA 44556",
+        post_code: 94654,
+        mobile: "015-17833810",
+    },
+]   
 
 export default function CheckOut() {
-    const [billingAddress, setBillingAddress] = useState(null)
+    const [placeOrder, ]= usePlaceOrderMutation()
+    
+    const [billingAddress, setBillingAddress] = useState(address[0])
     const cart = useSelector(state=>state.cart);
     const dispatch = useDispatch()
+    
 
     useEffect(()=>{
         dispatch(getTotal())
     },[cart, dispatch])
 
 
-    const address = [
-        {
-            title:"Shipping Address",
-            location: "26, Starts Hollow Colony, Denver, Colorado, United States",
-            post_code: 8004,
-            mobile: "01619-788808",
-        },
-        {
-            title:"Billing Address",
-            location: "201 Maple Drive, Placeholder Town, USA 44556",
-            post_code: 94654,
-            mobile: "015-17833810",
-        },
-    ]
+    const handlePlaceOrder = async()=>{
+        
+        const orderData = {
+            billingAddress,            
+        }
+        try {
+            const {data} = await placeOrder(orderData);
+            console.log(data?.url)
+            window.location.replace(data?.url)
+        } catch (error) {
+            console.log(error.message)
+        }        
+    }
 
-      console.log(cart)
   return (    
-    <div className="container flex mt-5  gap-5 flex-start">
-    <div className="w-2/3 sticky top-10">    
+    <div className="container  flex mt-5  gap-5 flex-start">
+    <div className="w-2/3 sticky top-10 ">    
     <p className='pb-3 heading'>Address: </p>  
     <hr />  
     {
@@ -107,7 +125,8 @@ export default function CheckOut() {
                 
                 <Button size='large' className='bg-primary text-white rounded-none '>Apply</Button>
             </div>
-            <Button className='w-full mt-5 bg-secondary text-white rounded-none' size='large'><a href="/checkout" className='w-full'>Check Out</a> </Button>
+            <Button onClick={()=>handlePlaceOrder()}
+            className='w-full mt-5 bg-secondary text-white rounded-none' size='large'>Place Order </Button>
         </div>
     </div>
     </div>    

@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Address, Dashboard, EditAddress, EditProfile, Home, OrderDetails, OrderHistory, Password, ProductDetails, ShoppingCart } from "../page";
+import { Address, Dashboard, EditAddress, EditProfile, Home, OrderDetails, OrderHistory, Password, PaymentCancel, PaymentFailed, PaymentSuccess, ProductDetails, ShoppingCart } from "../page";
 import MainLayout from "../Layout/MainLayout"
 import CheckOut from "../page/CheckOut/CheckOut";
 
@@ -23,6 +23,18 @@ const router = createBrowserRouter([
         {
           path: "/checkout",
           element: <CheckOut />
+        },
+        {
+          path: "/payment/success",
+          element: <PaymentSuccess />
+        },
+        {
+          path: "/payment/cancel",
+          element: <PaymentCancel />
+        },
+        {
+          path: "/payment/failed",
+          element: <PaymentFailed />
         },
         {
           path: "/dashboard",

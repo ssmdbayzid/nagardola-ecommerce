@@ -8,8 +8,15 @@ const productApiSlice = productApi.enhanceEndpoints({addTagTypes: ['Product']}).
         getSingleProduct: builder.query({
             query: (id)=> `products/${id}`,
             providesTags: ['Product']
+        }),
+        placeOrder: builder.mutation({
+            query: (body)=> ({
+                url: '/order/payment',
+                method: 'POST',
+                body
+            })
         })
     }),
 })
 
-export const {useGetproductsQuery, useGetSingleProductQuery} = productApiSlice;
+export const {useGetproductsQuery, useGetSingleProductQuery, usePlaceOrderMutation} = productApiSlice;

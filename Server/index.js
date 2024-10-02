@@ -9,6 +9,7 @@ dotEnv.config();
 
 const productRouter = require("./Routes/ProductRouter");
 const authRouter = require("./Routes/authRouter");
+const orderRouter = require("./Routes/orderRouter");
 
 // Middleware
 app.use(express.json());
@@ -29,6 +30,7 @@ connectDatabase().catch(error=>console.log(error.message))
 // router
 app.use("/api/v1/products", productRouter);
 app.use("/api/v1/auth", authRouter)
+app.use("/api/v1/order", orderRouter)
 
 app.get("/", (req, res)=> {
     res.send("Server running")
