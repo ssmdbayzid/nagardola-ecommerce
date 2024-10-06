@@ -7,7 +7,7 @@ import { FiMinus, FiPlus } from "react-icons/fi";
 import { Button, Input } from 'antd';
 import { addToCart, decreateCartQty, getTotal, removeCartItem } from '../app/features/cartSlice';
 
-export default function ShoppingCart() {
+export default function ShoppingCart({openDrawer, setOpenDrawer}) {
     const cart = useSelector(state=>state.cart);    
     const cartTotalAmount = useSelector(state=>state.cart.cartTotalAmount);    
     const dispatch = useDispatch()
@@ -20,7 +20,7 @@ export default function ShoppingCart() {
         <div className='flex flex-col h-full'>
             <div className="flex items-center justify-between bg-slate-300 py-5 px-4">
                 <h2 className='heading'>Shopping Cart</h2>
-                <IoMdClose className='text-2xl' />
+                <IoMdClose onClick={()=>setOpenDrawer(!openDrawer)} className='text-2xl cursor-pointer' />
             </div>
             <div className="p-3  flex-1 overflow-y-auto">
             {cart.cartItems.map((item, index)=> 
@@ -30,7 +30,7 @@ export default function ShoppingCart() {
                 </div>
                 <div className=" overflow-hidden">
                     <h3 className='sub_title text-secondary  text-ellipsis text-nowrap overflow-hidden'>{item.name}</h3>
-                    <p className='text-lg font-bold'>${item.discountPrice} <del className='text-accent'>${item.price}</del></p>
+                    <p  className='text-lg font-bold '>${item.discountPrice} <del className='text-accent'>${item.price}</del></p>
                     <div className="flex items-center gap-2">    
                         <Button
                         onClick={()=>dispatch(decreateCartQty(item))}                        
@@ -39,7 +39,7 @@ export default function ShoppingCart() {
                         <Button
                         onClick={()=>dispatch(addToCart(item))}
                         size="small"><FiPlus /> </Button>               
-                        <Input size='middle' value={"$ " + item.discountPrice * item.cartQty} className='w-20 border-primary text-md text-primary font-semibold text-center'/>                               
+                        <Input size='middle' value={"$" + item.discountPrice * item.cartQty} className='w-28 border-primary text-md text-primary font-semibold text-center'/>                               
                     </div>
                 </div>
                 <GoTrash 

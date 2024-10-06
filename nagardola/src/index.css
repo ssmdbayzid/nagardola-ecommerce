@@ -53,6 +53,11 @@
     border-color: rgb(var(--primary-color));    
 }
 
+.ant-btn.btn-primary:hover {
+    background: rgb(var(--primary-color)) !important;
+    color:#fff !important;    
+}
+
 .ant-carousel .slick-slider button {  
     color: #222;
     width: 40px;

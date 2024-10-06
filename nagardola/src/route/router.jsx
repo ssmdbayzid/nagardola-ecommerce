@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Address, Dashboard, EditAddress, EditProfile, Home, OrderDetails, OrderHistory, Password, PaymentCancel, PaymentFailed, PaymentSuccess, ProductDetails, ShoppingCart } from "../page";
+import { Address, Dashboard, EditAddress, EditProfile, Home, Login, OrderDetails, OrderHistory, Password, PaymentCancel, PaymentFailed, PaymentSuccess, ProductDetails, ShoppingCart, Signup } from "../page";
 import MainLayout from "../Layout/MainLayout"
 import CheckOut from "../page/CheckOut/CheckOut";
 
@@ -19,6 +19,14 @@ const router = createBrowserRouter([
         {
           path: "/cart",
           element: <ShoppingCart />
+        },
+        {
+          path: "/login",
+          element: <Login />
+        },
+        {
+          path: "/signup",
+          element: <Signup />
         },
         {
           path: "/checkout",

@@ -1,11 +1,15 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { CiSearch, CiHeart, CiUser  } from "react-icons/ci";
 import { BsBasket3 } from "react-icons/bs";
-import { ShoppingOutlined } from '@ant-design/icons';
-import { Badge, Button, Drawer } from 'antd';
+import { ShoppingOutlined, SmileOutlined, SettingOutlined   } from '@ant-design/icons';
+import { Badge, Button, Drawer,  } from 'antd';
 import { useSelector } from 'react-redux'
 import { IoMdClose } from "react-icons/io";
 import ShoppingCart from '../ShoppingCart';
+import { AuthContext } from '../../context/AuthProvider';
+import { DownOutlined } from '@ant-design/icons';
+import {  Divider, Dropdown, Space, theme } from 'antd';
+
 
 const navLinks = [
     {
@@ -37,10 +41,36 @@ const navLinks = [
         link: "/contact"
     },
 ]
+
+
+const items = [
+    {
+      key: '1',
+      label: <a href="/dashboard">My Account</a>,
+      
+    },
+    {
+      type: 'divider',
+    },
+    {
+      key: '2',
+      label: ( <a href="/signup">Sign Up</a>),
+      extra: '⌘P',
+    },
+    {
+      key: '3',
+      label: ( <a href="/login">Log In</a>),
+      extra: '⌘B',
+    },    
+  ];
+
 export default function Menu() {
     const [openDrawer, setOpenDrawer] = useState(false)
+    
+    const {user} = useContext(AuthContext)
+    console.log(user)
 
-
+    
     const cartItems = useSelector((state)=>state.cart.cartItems);
     const favoriteItems = useSelector(state => state.favorite.favoriteItems)    
   return (
@@ -70,7 +100,11 @@ export default function Menu() {
         className="text-2xl cursor-pointer" />
         </Badge>
 
-        <CiUser  className='text-[30px]'/>
+        <Dropdown 
+        placement="bottom"
+        menu={{items}}>
+        <CiUser  className='text-[30px] cursor-pointer'/>
+        </Dropdown>
         <span className='text-lg'>0 items</span>
     </div>
     </div>

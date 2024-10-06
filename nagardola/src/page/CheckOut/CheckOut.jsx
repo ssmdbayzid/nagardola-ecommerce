@@ -42,8 +42,7 @@ export default function CheckOut() {
             billingAddress,            
         }
         try {
-            const {data} = await placeOrder(orderData);
-            console.log(data?.url)
+            const {data} = await placeOrder(orderData);            
             window.location.replace(data?.url)
         } catch (error) {
             console.log(error.message)

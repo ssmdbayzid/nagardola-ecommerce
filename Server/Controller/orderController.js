@@ -12,8 +12,7 @@ exports.payment = async (req, res)=>{
     const tran_id = uuidv4();
     const user = await User.find({email: req.email})
 
-    try {
-        console.log(req.body);
+    try {        
     
         const data = {
             total_amount: 100,
@@ -52,20 +51,20 @@ exports.payment = async (req, res)=>{
             res.send({success: true, url: GetwayPageUrl})
             })
 
-            const newOrder = {
-            user: user._id,
-            total_amount,
-            products: req.body.items,
-            tran_id,
-            shipping_address,
-        }
+        //     const newOrder = {
+        //     user: user._id,
+        //     total_amount,
+        //     products: req.body.items,
+        //     tran_id,
+        //     shipping_address,
+        // }
     
-        const order = new Order.create(newOrder);
-         await User.updateOne({_id: user._id}, {
-            $push : {
-                $orders: {orders: order._id}
-            }
-        })
+        // const order = new Order.create(newOrder);
+        //  await User.updateOne({_id: user._id}, {
+        //     $push : {
+        //         $orders: {orders: order._id}
+        //     }
+        // })
         
     } catch (error) {
         return res.status(505).json({success: false, message: error.message})
@@ -88,7 +87,7 @@ exports.paymentCancel = async (req, res)=>{
     // const tran_id = req.params.tran_id;
      try {        
         await Order.deleteOne({tran_id: req.params.id})        
-         res.redirect("http://localhost:5173/payment/cancal")
+         res.redirect("http://localhost:5173/payment/cancel")
      } catch (error) {
         return res.send(error.message)
      }
